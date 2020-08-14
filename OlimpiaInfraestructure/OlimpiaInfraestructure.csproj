@@ -7,8 +7,8 @@
     <ProjectGuid>{FC02EBDB-C819-4570-B405-575D51628EC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyDigitalInfraestructure</RootNamespace>
-    <AssemblyName>MyDigitalInfraestructure</AssemblyName>
+    <RootNamespace>OlimpiaInfraestructure</RootNamespace>
+    <AssemblyName>OlimpiaInfraestructure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
