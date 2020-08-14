@@ -1,0 +1,36 @@
+1 - De ejemplos de al menos 2 requerimientos no funcionales que siempre tomaría en cuenta:
+ * Que arquitectura se debe implementar con base al requerimiento
+ * Cuales validaciones de seguridad se deben tener en cuenta a nivel técnico
+
+2 - ¿Cuál es la diferencia entre un Servicio Web SOAP y un servicio REST
+ * Una de las principales diferencias es protocolo de comunicacion: SOAP utiliza XML y REST JSON,
+ una api rest es mas rapida y consume menos datos para transmitir información pero un servicio SOAP brinda mayor seguridad.
+  
+3 - ¿Qué es un servidor de aplicaciones ( IIS )
+ * Un servidor de aplicaciones IIS es un conjunto de servicios que permiten administrar y configurar de forma visual e intuitiva aplicativos web entre otros.
+
+4 - ¿Qué es Inversion of Control?  de ejemplo de algún framework
+ * Conceptualmente no entiendo como funciona Inversion of Control, pero si he usado alguno de sus conceptos con la inyeccion de dependencias por constructor y por propiedad,
+ los que he tenido la oportunidad de trabajar son Spring, Ninject
+ 
+5 - ¿Qué es WCF
+ * WCF es un modelo de comunicacion orientado a servicios que permite la comunicacion de dos aplicativos en .NET.
+
+6 - ¿Qué es un binding en WCF, nombre algunos de los más utilizados?
+ * Los binding son el tipo de protocolo de comunicacion que se va a utilizar en el WCF, Ejemplos de ellos de uso comun son (BasicHttpBinding, WSHttpBinding)
+ 
+7 - ¿Qué es un Branch, Merge y Commit? ¿en qué se usan en común?
+ * Una branch es una rama o linea de desarrollo dentro de un repositorio de GIT (develop, master)
+ * los Merge es cuando fusionamos los cambios de una rama con otra ejemplo (develop , test)
+ * Los Commit son la accion de registrar con una observacion un conjunto de cambios sobre una rama.
+
+8 - En C# ¿Cuál es la diferencia entre una clase base y una interfaz?
+ * La diferencia entre una clase base y una interfaz es que la interfaz no contiene ninguna implementacion,
+ solo es el contratro de los metodos que por obligacion debe implementar.
+ 
+9 - Se tiene una variable de tipo string que contiene una fecha y hora en formato desconocido, ¿cómo identificaría el formato?
+ * No tengo mucha claridad de como realizar esta operacion pero creo que intentaria crear una regla con una expresion regular para definir el match del formato.
+ 
+10 - Explique la diferencia de las clausulas is y as en C#
+ * La clausula is retorna un booleano si las dos variables son del mismo tipo
+ * la clausula as asigna el valor a la variable si esta es del mismo tipo
