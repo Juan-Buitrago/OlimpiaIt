@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace OlimpiaBusiness.Interfaces.Exercise1
 {
@@ -16,7 +17,7 @@ namespace OlimpiaBusiness.Interfaces.Exercise1
         /// </summary>
         /// <param name="number">Numero entero el cual va a ser validado</param>
         /// <returns>Retorna un bool indicando si es multiplo o no.</returns>
-        public bool IsMultipleOfThree(int number) {
+        public bool IsMultipleOfThree(BigInteger number) {
 
             return IsDivisible(number, 3);
         }
@@ -30,7 +31,7 @@ namespace OlimpiaBusiness.Interfaces.Exercise1
         /// <param name="x">Numero entero el cual va a ser dividido entre otro</param>
         /// <param name="n">Numero entero el cual va a ser dividido entre otro</param>
         /// <returns>Retorna un bool indicando si es divisible o no.</returns>
-        private bool IsDivisible(int x, int n)
+        private bool IsDivisible(BigInteger x, int n)
         {
             return (x % n) == 0;
         }
