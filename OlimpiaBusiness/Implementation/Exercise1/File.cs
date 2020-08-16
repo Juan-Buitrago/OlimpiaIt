@@ -55,7 +55,8 @@ namespace OlimpiaBusiness.Implementation.Exercise1
                 {
                     foreach (var txt in lineText)
                     {
-                        fs.Write(Encoding.UTF8.GetBytes(txt), 0, txt.Length);
+                        var tmp = $"{txt} \r";
+                        fs.Write(Encoding.UTF8.GetBytes(tmp), 0, tmp.Length);
                     }
                 }
                 return true;
