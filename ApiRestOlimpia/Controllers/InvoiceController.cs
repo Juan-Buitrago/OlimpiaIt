@@ -1,5 +1,5 @@
-﻿using OlimpiaBusiness.Implementation;
-using OlimpiaBusiness.Interfaces;
+﻿using OlimpiaBusiness.Implementation.Exercise2;
+using OlimpiaBusiness.Interfaces.Exercise2;
 using OlimpiaInfraestructure.Models;
 using System;
 using System.Collections.Generic;

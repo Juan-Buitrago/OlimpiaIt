@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\Invoice.cs" />
-    <Compile Include="Interfaces\IInvoice.cs" />
+    <Compile Include="Implementation\Exercise1\File.cs" />
+    <Compile Include="Interfaces\Exercise1\IDigit.cs" />
+    <Compile Include="Implementation\Exercise2\Invoice.cs" />
+    <Compile Include="Implementation\Exercise1\Digit.cs" />
+    <Compile Include="Interfaces\Exercise1\IFile.cs" />
+    <Compile Include="Interfaces\Exercise2\IInvoice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,8 +59,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\InvoiceModel.cs" />
-    <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\Exercise1\DigitModel.cs" />
+    <Compile Include="Models\Exercise2\InvoiceModel.cs" />
+    <Compile Include="Models\Exercise2\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
