@@ -31,7 +31,7 @@ namespace OlimpiaBusiness.Implementation
                 ltsInvoice.ForEach(invoice => ValidateFields(invoice));
 
                 response.Error = false;
-                response.Message = string.Format("El valor total de las facturas es: {0}", ReturnTotalValueInvoices(ltsInvoice));
+                response.Message = $"El valor total de las facturas es: {ReturnTotalValueInvoices(ltsInvoice)}";
 
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace OlimpiaBusiness.Implementation
                 }
 
                 response.Error = false;
-                response.Message = string.Format("El valor total del iva es {0}", ReturnTotalValueWithVat(invoice));
+                response.Message = $"El valor total del iva es {ReturnTotalValueWithVat(invoice)}";
 
             }
             catch (Exception ex)
@@ -113,7 +113,7 @@ namespace OlimpiaBusiness.Implementation
             }
             catch (Exception)
             {
-                throw new Exception(string.Format("Ocurrio un error al intentar calcular el valor total del iva en la factura {0}", invoice.Id));
+                throw new Exception($"Ocurrio un error al intentar calcular el valor total del iva en la factura {invoice.Id}");
             }
         }
 
@@ -135,21 +135,21 @@ namespace OlimpiaBusiness.Implementation
         {
             if (!IdIsPositive(invoice))
             {
-                throw new Exception(string.Format("El campo Id de la factura {0} no es un numero positivo", invoice.Id));
+                throw new Exception($"El campo Id de la factura {invoice.Id} no es un numero positivo");
             }
 
             if (!NitIsNumeric(invoice))
             {
-                throw new Exception(string.Format("El campo Nit de la factura {0} debe ser numerico", invoice.Id));
+                throw new Exception($"El campo Nit de la factura {invoice.Id} debe ser numerico");
             }
 
             if (!TotalValueIsPositive(invoice)) {
-                throw new Exception(string.Format("El valor total de la factura {0} debe ser un numero positivo", invoice.Id));
+                throw new Exception($"El valor total de la factura {invoice.Id} debe ser un numero positivo");
             }
 
             if (!ValidateVatPercentage(invoice))
             {
-                throw new Exception(string.Format("El porcentaje de iva de la factura {0} no es valido", invoice.Id));
+                throw new Exception($"El porcentaje de iva de la factura {invoice.Id} no es valido");
             }
         }
 
@@ -165,7 +165,7 @@ namespace OlimpiaBusiness.Implementation
                 return Enumerable.Range(0, 100).Contains(invoice.VatPercentage);
             }
             catch (Exception) {
-                throw new Exception(string.Format("Ocurrio un error al intentar validar el porcentaje de iva en la factura {0}",invoice.Id));
+                throw new Exception($"Ocurrio un error al intentar validar el porcentaje de iva en la factura {invoice.Id}");
             }
         }
 
@@ -178,7 +178,7 @@ namespace OlimpiaBusiness.Implementation
             
             foreach (var grouping in invoices.GroupBy(t => t.Id).Where(t => t.Count() != 1))
             {
-                throw new Exception(string.Format("La factura '{0}' existe en {1} veces.", grouping.Key, grouping.Count()));
+                throw new Exception($"La factura '{grouping.Key}' existe en {grouping.Count()} veces.");
             }
             
         }
@@ -194,7 +194,7 @@ namespace OlimpiaBusiness.Implementation
                 return IsPositive(invoice.TotalValue);
             } catch (Exception)
             {
-                throw new Exception(string.Format("Ocurrio un error al intentar validar el valor total de la factura {0}",invoice.Id));
+                throw new Exception($"Ocurrio un error al intentar validar el valor total de la factura {invoice.Id}");
             }
         }
 
@@ -208,7 +208,7 @@ namespace OlimpiaBusiness.Implementation
                 return IsPositive(invoice.Id);
             }
             catch (Exception) {
-                throw new Exception(string.Format("Ocurrio un error al intentar validar el campo Id de la factura {0}",invoice.Id));
+                throw new Exception($"Ocurrio un error al intentar validar el campo Id de la factura {invoice.Id}");
             }
         }
 
@@ -248,7 +248,7 @@ namespace OlimpiaBusiness.Implementation
                 }
             }
             catch (Exception) {
-                throw new Exception(string.Format("Ocurrio un error al intentar validar el campo Nit de la factura {0}",invoice.Id));
+                throw new Exception($"Ocurrio un error al intentar validar el campo Nit de la factura {invoice.Id}");
             }
 
         }
