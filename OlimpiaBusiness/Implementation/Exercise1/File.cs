@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OlimpiaBusiness.Interfaces.Exercise1;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OlimpiaBusiness.Implementation.Exercise1
 {
-    public class File
+    public class File : IFile
     {
         #region Public Methods
         /// <summary>

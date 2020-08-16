@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OlimpiaBusiness.Interfaces.Exercise1
 {
-    public class Digit:IDigit
+    public class Digit: IDigit
     {
         #region Public Methods
 
